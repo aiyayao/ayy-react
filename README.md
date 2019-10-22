@@ -22,7 +22,8 @@
 │   ├── router                  # 路由
 │   ├── app.js                  # 根组件
 │   ├── index.js                # 入口文件
-│   └── index.template.html     #html模板
+│   └── index.template.html     # html模板
+├── .eslintrc                   # 语法规范配置文件
 ├── babel.config.js
 └── postcss.config.js
 ```
