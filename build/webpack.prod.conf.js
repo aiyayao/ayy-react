@@ -11,7 +11,7 @@ module.exports = merge(baseWebpackConfig, {
   output: {
     filename: path.join('./', 'js/[name].[chunkhash:8].js'),
     chunkFilename: path.join('./', 'js/[name].[chunkhash:8].chunk.js'),
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
   },
   optimization: {

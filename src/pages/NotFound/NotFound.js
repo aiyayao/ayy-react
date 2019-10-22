@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+const propTypes = {};
+
 class NotFound extends Component {
   render() {
     return (
@@ -9,5 +11,7 @@ class NotFound extends Component {
     );
   }
 }
+
+NotFound.propTypes = propTypes;
 
 export default NotFound;

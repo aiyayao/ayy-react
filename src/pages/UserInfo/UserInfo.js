@@ -1,6 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getUserInfo } from 'actions/userInfo';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  userInfo: PropTypes.shape({
+    isLoading: PropTypes.bool,
+    userInfo: PropTypes.object,
+    errorMsg: PropTypes.string
+  }),
+  getUserInfo: PropTypes.func,
+};
 
 function UserInfo(props) {
   const { isLoading, userInfo, errorMsg } = props.userInfo;
@@ -19,5 +29,7 @@ function UserInfo(props) {
     </div>
   );
 }
+
+UserInfo.propTypes = propTypes;
 
 export default connect((state) => ({userInfo: state.userInfo}), { getUserInfo })(UserInfo);

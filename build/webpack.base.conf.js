@@ -6,7 +6,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-  // mod: NODE_ENV,
+  mode: NODE_ENV,
   entry: {
     index: resolve('src/index.js'),
   },
@@ -24,7 +24,7 @@ module.exports = {
     rules: [
       { 
         test: /\.(js|jsx)$/, 
-        use: require.resolve('babel-loader'), 
+        loader: require.resolve('babel-loader'), 
         exclude: /node_modules/ 
       },
       {

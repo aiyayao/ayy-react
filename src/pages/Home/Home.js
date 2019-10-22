@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+const propTypes = {};
+
 class Home extends Component {
   render() {
     return (
@@ -7,5 +9,7 @@ class Home extends Component {
     );
   }
 };
+
+Home.propTypes = propTypes;
 
 export default Home;
