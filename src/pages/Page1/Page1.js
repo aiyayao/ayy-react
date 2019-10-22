@@ -4,6 +4,8 @@ import './Page1.css';
 
 import dogs from 'assets/images/timg.jpg';
 
+const propTypes = {};
+
 class Page1 extends Component {
   render() {
     return (
@@ -14,5 +16,7 @@ class Page1 extends Component {
     );
   }
 };
+
+Page1.propTypes = propTypes;
 
 export default Page1;

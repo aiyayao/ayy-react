@@ -24,7 +24,7 @@ export function getUserInfo() {
     return axios('http://localhost:8088/api/user.json')
     .then((res) => {
       dispatch(getUserInfoSuccess(res.data));
-    }).catch((err) => {
+    }).catch(() => {
       dispatch(getUserInfoFaild());
     });
   };

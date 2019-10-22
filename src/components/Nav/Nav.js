@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+const propTypes = {};
+
 class Nav extends Component {
   render() {
     return (
@@ -15,5 +17,7 @@ class Nav extends Component {
     );
   }
 }
+
+Nav.propTypes = propTypes;
 
 export default Nav;

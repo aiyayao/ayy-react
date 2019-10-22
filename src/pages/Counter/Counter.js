@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import { increment, decrement, reset } from 'actions/counter';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  counter: PropTypes.object,
+  increment: PropTypes.func,
+  decrement: PropTypes.func,
+  reset: PropTypes.func,
+};
 
 class Counter extends Component {
   constructor(props) {
@@ -38,5 +46,7 @@ const mapDispatchToProps = (dispatch) => {
     }
   };
 };
+
+Counter.propTypes = propTypes;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

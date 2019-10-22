@@ -4,11 +4,15 @@ const merge = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.conf.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+function resolve(dir) {
+  return path.resolve(__dirname, '..', dir)
+}
+
 module.exports = merge(baseWebpackConfig, {
   output: {
     filename: path.join('./', 'js/[name].js'),
     chunkFilename: path.join('./', 'js/[name].chunk.js'),
-    path: path.resolve(__dirname, '../dist')
+    path: resolve('dist')
   },
   optimization: {
     splitChunks: {
@@ -22,14 +26,22 @@ module.exports = merge(baseWebpackConfig, {
     historyApiFallback: true,
     open: true,
     hot: true,
+    compress: true,
+    inline: true,
   },
   devtool: 'inline-source-map',
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/, 
+        loader: require.resolve('eslint-loader'), 
+        include: resolve('src')
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'postcss-loader']
-      }
+      },
     ]
   },
   plugins: [
