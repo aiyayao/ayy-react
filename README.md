@@ -26,6 +26,7 @@
 │   └── index.template.html     # html模板
 ├── tests                       # 测试相关目录
 ├── jest.config.js              # Jest测试配置文件
+├── .browserslistrc             # browserslist配置文件
 ├── .eslintrc.js                # Eslint配置文件
 ├── babel.config.js
 └── postcss.config.js
