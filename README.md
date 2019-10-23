@@ -8,6 +8,7 @@
 │   ├── webpack.base.conf.js
 │   ├── webpack.dev.conf.js
 │   └── webpack.prod.conf.js
+├── config                      # 项目配置相关目录
 ├── src                         # 主目录
 │   ├── assets                  # 静态资源
 │   │   └── images
@@ -23,7 +24,9 @@
 │   ├── app.js                  # 根组件
 │   ├── index.js                # 入口文件
 │   └── index.template.html     # html模板
-├── .eslintrc                   # 语法规范配置文件
+├── tests                       # 测试相关目录
+├── jest.config.js              # Jest测试配置文件
+├── .eslintrc.js                # Eslint配置文件
 ├── babel.config.js
 └── postcss.config.js
 ```
