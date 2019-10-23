@@ -8,7 +8,7 @@ class Home extends Component {
       <div className="home">This is Home.</div>
     );
   }
-};
+}
 
 Home.propTypes = propTypes;
 

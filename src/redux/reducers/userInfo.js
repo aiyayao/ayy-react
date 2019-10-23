@@ -14,7 +14,7 @@ export default function reducer(state=initState, action) {
         isLoading: true,
         userInfo: {},
         errorMsg: ''
-      }
+      };
     }
     case GET_USER_INFO_SUCCESS: {
       return {

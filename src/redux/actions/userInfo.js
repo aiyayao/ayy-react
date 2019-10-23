@@ -22,10 +22,10 @@ export function getUserInfo() {
   return function(dispatch) {
     dispatch(getUserInfoRequest());
     return axios('http://localhost:8088/api/user.json')
-    .then((res) => {
-      dispatch(getUserInfoSuccess(res.data));
-    }).catch(() => {
-      dispatch(getUserInfoFaild());
-    });
+      .then((res) => {
+        dispatch(getUserInfoSuccess(res.data));
+      }).catch(() => {
+        dispatch(getUserInfoFaild());
+      });
   };
 }

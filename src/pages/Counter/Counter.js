@@ -11,10 +11,6 @@ const propTypes = {
 };
 
 class Counter extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="counter">
@@ -36,13 +32,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     increment: () => {
-      dispatch(increment())
+      dispatch(increment());
     },
     decrement: () => {
-      dispatch(decrement())
+      dispatch(decrement());
     },
     reset: () => {
-      dispatch(reset())
+      dispatch(reset());
     }
   };
 };

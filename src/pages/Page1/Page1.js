@@ -15,7 +15,7 @@ class Page1 extends Component {
       </div>
     );
   }
-};
+}
 
 Page1.propTypes = propTypes;
 

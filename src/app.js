@@ -10,7 +10,7 @@ class App extends Component {
         {getRouter()}
       </div>
     );
-  };
+  }
 }
 
 export default App;
