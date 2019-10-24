@@ -30,20 +30,25 @@ module.exports = {
       },
       { 
         test: /\.css$/, 
+        use: [NODE_ENV === 'development' ? require.resolve('style-loader') : MiniCssExtractPlugin.loader, require.resolve('css-loader')]
+      },
+      {
+        test: /\.(scss|sass)$/,
         use: [
-          { 
-            loader: NODE_ENV === 'development' ? require.resolve('style-loader') : MiniCssExtractPlugin.loader 
-          },
+          NODE_ENV === 'development' ? require.resolve('style-loader') : MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: require.resolve('css-loader'),
             options: {
-              importLoaders: 1,
+              modules: true
             }
           },
           {
-            loader: 'postcss-loader'
+            loader: require.resolve('postcss-loader')
+          },
+          {
+            loader: require.resolve('sass-loader')
           }
-        ] 
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
