@@ -20,14 +20,6 @@ module.exports = merge(baseWebpackConfig, {
       chunks: 'all'
     }
   },
-  module: {
-    rules: [
-      { 
-        test: /\.css$/, 
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] 
-      },
-    ]
-  },
   plugins: [
     new HtmlWebpackPlugin({
       fileName: 'index.html',
