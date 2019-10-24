@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const NODE_ENV = process.env.NODE_ENV;
 
 function resolve(dir) {
@@ -26,6 +27,23 @@ module.exports = {
         test: /\.(js|jsx)$/, 
         loader: require.resolve('babel-loader'), 
         exclude: /node_modules/ 
+      },
+      { 
+        test: /\.css$/, 
+        use: [
+          { 
+            loader: NODE_ENV === 'development' ? require.resolve('style-loader') : MiniCssExtractPlugin.loader 
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          }
+        ] 
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

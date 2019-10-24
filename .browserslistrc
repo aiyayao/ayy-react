@@ -1,4 +1,5 @@
 >1%
 not dead
-not ie < 11
+not ie < 9
 not op_mini all
+not ios < 9

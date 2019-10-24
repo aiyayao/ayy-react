@@ -38,10 +38,6 @@ module.exports = merge(baseWebpackConfig, {
         loader: require.resolve('eslint-loader'), 
         include: resolve('src')
       },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'postcss-loader']
-      },
     ]
   },
   plugins: [
